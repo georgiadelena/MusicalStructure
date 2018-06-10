@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tan_background"
+    android:orientation="vertical"
+    tools:context="com.example.android.musicalstructure.MainActivity">
+
+    <TextView
+        android:id="@+id/alternative"
+        style="@style/CategoryStyle"
+        android:background="@color/background"
+        android:text="@string/alternative" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"/>
+
+    <TextView
+        android:id="@+id/jazz"
+        style="@style/CategoryStyle"
+        android:background="@color/background"
+        android:text="@string/jazz" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"/>
+
+    <TextView
+        android:id="@+id/rock"
+        style="@style/CategoryStyle"
+        android:background="@color/background"
+        android:text="@string/rock" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"/>
+
+    <TextView
+        android:id="@+id/metal"
+        style="@style/CategoryStyle"
+        android:background="@color/background"
+        android:text="@string/metal" />
+
+</LinearLayout>

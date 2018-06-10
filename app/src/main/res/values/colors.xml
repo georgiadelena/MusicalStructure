@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#9C27B0</color>
+    <color name="colorPrimaryDark">#7B1FA2</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- Background color for app -->
+    <color name="tan_background">#9E9E9E</color>
+
+    <!-- Background color for each category and song list -->
+    <color name="background">#616161</color>
+
+    <color name="words">#E0E0E0</color>
+</resources>

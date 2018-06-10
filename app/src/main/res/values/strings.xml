@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Musical Structure</string>
+    <string name="alternative">Alternative</string>
+    <string name="jazz">Jazz</string>
+    <string name="rock">Rock</string>
+    <string name="metal">Metal</string>
+    <string name="now_playing">Now playing</string>
+</resources>
