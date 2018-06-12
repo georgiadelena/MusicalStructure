@@ -1,7 +1,10 @@
 package com.example.android.musicalstructure;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -16,17 +19,33 @@ public class RockActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
-        ArrayList<Item> items = new ArrayList<Item>();
+        final ArrayList<Item> items = new ArrayList<Item>();
 
-        items.add(new Item("Lachrymose","The Unseen"));
-        items.add(new Item("Lachrymose", "Nepenthe"));
-        items.add(new Item("Lachrymose", "Capricorn Descending"));
-        items.add(new Item("Primordial", "Empire Falls"));
-        items.add(new Item("Walking Stone Giants", "Buried Alive"));
-        items.add(new Item("The Psalm", "Ascetic"));
+        items.add(new Item("Bad Wolves", "Zombie"));
+        items.add(new Item("Ghost", "Rats"));
+        items.add(new Item("Royal Blood", "Little Monster"));
+        items.add(new Item("The Tea Party", "Psychopomp"));
+        items.add(new Item("Muse", "The Handler"));
+        items.add(new Item("Grave Pleasures", "Infatuation Overkill"));
 
         ItemAdapter adapter = new ItemAdapter(this, items);
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(adapter);
+
+        // When the user clicks on an an artist-song item, we need to navigate to the play now activity
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+
+                // Get the {@link Item} object at the given position the user clicked on
+                Item item = items.get(position);
+
+                Intent playIntent = new Intent(RockActivity.this, NowPlayingActivity.class);
+                // Passing artist and song name to the play now activity
+                playIntent.putExtra("EXTRA_ARTIST_ID", item.getArtist());
+                playIntent.putExtra("EXTRA_SONG_ID", item.getSong());
+                startActivity(playIntent);
+            }
+        });
     }
 }

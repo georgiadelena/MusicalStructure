@@ -23,12 +23,12 @@ public class JazzActivity extends AppCompatActivity {
 
         final ArrayList<Item> items = new ArrayList<Item>();
 
-        items.add(new Item("Lachrymose","The Unseen"));
-        items.add(new Item("Lachrymose", "Nepenthe"));
-        items.add(new Item("Lachrymose", "Capricorn Descending"));
-        items.add(new Item("Primordial", "Empire Falls"));
-        items.add(new Item("Walking Stone Giants", "Buried Alive"));
-        items.add(new Item("The Psalm", "Ascetic"));
+        items.add(new Item("Ray Charles", "Hit The Road Jack"));
+        items.add(new Item("Frank Sinatra", "I've Got You Under My Skin"));
+        items.add(new Item("Nat King Cole", "Unforgettable"));
+        items.add(new Item("Nina Simone", "My Baby Just Cares For Me "));
+        items.add(new Item("Louis Armstrong, Ella Fitzgerald", "Dream A Little Dream of Me "));
+        items.add(new Item("Dinah Washington", "Cry Me A River"));
 
         ItemAdapter adapter = new ItemAdapter(this, items);
         ListView listView = (ListView) findViewById(R.id.list);

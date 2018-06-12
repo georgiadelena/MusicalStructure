@@ -1,24 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/tan_background"
-    android:orientation="vertical"
-    tools:context="com.example.android.musicalstructure.MainActivity"
-    android:id="@+id/play_now">
+    android:fillViewport="true">
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:background="@color/background"
-        android:id="@+id/now_playing_artist"/>
+    <RelativeLayout
+        android:id="@+id/play_now"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/tan_background"
+        tools:context="com.example.android.musicalstructure.MainActivity">
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:background="@color/background"
-        android:id="@+id/now_playing_song"/>
+        <ImageView
+            android:id="@+id/now_playing_image"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/notes" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/now_playing_artist"
+            style="@style/NowPlayingArtistStyle"
+            android:layout_below="@id/now_playing_image"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/now_playing_song"
+            style="@style/NowPlayingSongStyle"
+            android:layout_below="@id/now_playing_artist"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/play_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/now_playing_song"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:text="@string/play" />
+
+        <Button
+            android:id="@+id/pause_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/play_button"
+            android:layout_centerHorizontal="true"
+            android:text="@string/pause" />
+
+    </RelativeLayout>
+
+</ScrollView>

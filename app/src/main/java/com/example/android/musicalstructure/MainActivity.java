@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TextView alternative = (TextView) findViewById(R.id.alternative);
-        alternative.setOnClickListener(new View.OnClickListener(){
+        alternative.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the Alternative View is clicked on.
             @Override
             public void onClick(View view) {

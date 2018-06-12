@@ -26,8 +26,8 @@ public class ItemAdapter extends ArrayAdapter<Item> {
      * to populate into the lists.
      *
      * @param context The current context. Used to inflate the layout file.
-     * @param items A List of item objects to display in a list
-     * */
+     * @param items   A List of item objects to display in a list
+     */
     public ItemAdapter(Activity context, ArrayList<Item> items) {
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
         // the second argument is used when the ArrayAdapter is populating a single TextView.
@@ -39,17 +39,17 @@ public class ItemAdapter extends ArrayAdapter<Item> {
     /**
      * Provides a view for an AdapterView (ListView, GridView, etc.)
      *
-     * @param position The position in the list of data that should be displayed in the
-     *                 list item view.
+     * @param position    The position in the list of data that should be displayed in the
+     *                    list item view.
      * @param convertView The recycled view to populate.
-     * @param parent The parent ViewGroup that is used for inflation.
+     * @param parent      The parent ViewGroup that is used for inflation.
      * @return The View for the position in the AdapterView.
      */
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View listItemView = convertView;
-        if(listItemView == null) {
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
         }

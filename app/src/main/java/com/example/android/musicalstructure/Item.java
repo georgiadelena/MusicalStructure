@@ -5,6 +5,9 @@ package com.example.android.musicalstructure;
  */
 
 public class Item {
+    /**
+     *  This is a custom class that holds the name of the artist and the song
+     */
     private String mArtist;
     private String mSong;
 
